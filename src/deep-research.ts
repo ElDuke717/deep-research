@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' }); 
+
 import FirecrawlApp, { SearchResponse } from '@mendable/firecrawl-js';
 import { generateObject } from 'ai';
 import { compact } from 'lodash-es';
@@ -7,6 +10,8 @@ import { z } from 'zod';
 import { o3MiniModel, trimPrompt } from './ai/providers';
 import { systemPrompt } from './prompt';
 import { OutputManager } from './output-manager';
+
+console.log("FIRECRAWL_KEY from env:", process.env.FIRECRAWL_KEY);
 
 // Initialize output manager for coordinated console/progress output
 const output = new OutputManager();

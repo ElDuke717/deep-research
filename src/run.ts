@@ -1,9 +1,14 @@
+import * as dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' }); // Specify the path to your .env file
+
 import * as fs from 'fs/promises';
 import * as readline from 'readline';
 
 import { deepResearch, writeFinalReport } from './deep-research';
 import { generateFeedback } from './feedback';
 import { OutputManager } from './output-manager';
+
+
 
 const output = new OutputManager();
 
