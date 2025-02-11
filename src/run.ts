@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-dotenv.config({ path: '.env.local' }); // Specify the path to your .env file
+dotenv.config({ path: '.env.local' }); 
 
 import * as fs from 'fs/promises';
 import * as readline from 'readline';
